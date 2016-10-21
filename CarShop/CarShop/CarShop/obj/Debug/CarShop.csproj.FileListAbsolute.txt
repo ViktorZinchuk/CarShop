@@ -1,0 +1,6 @@
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\bin\Debug\CarShop.exe.config
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\bin\Debug\CarShop.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\bin\Debug\CarShop.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\obj\Debug\CarShop.csprojResolveAssemblyReference.cache
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\obj\Debug\CarShop.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\obj\Debug\CarShop.pdb

@@ -1,0 +1,8 @@
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Debug\VendorClient.exe.config
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Debug\VendorClient.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Debug\VendorClient.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\obj\Debug\VendorClient.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\obj\Debug\VendorClient.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\obj\Debug\VendorClient.csprojResolveAssemblyReference.cache

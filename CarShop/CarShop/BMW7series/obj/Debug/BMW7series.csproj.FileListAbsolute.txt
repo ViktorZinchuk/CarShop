@@ -1,0 +1,6 @@
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW7series\bin\Debug\BMW7series.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW7series\bin\Debug\BMW7series.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW7series\bin\Debug\CarShopCommon.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW7series\bin\Debug\CarShopCommon.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW7series\obj\Debug\BMW7series.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW7series\obj\Debug\BMW7series.pdb

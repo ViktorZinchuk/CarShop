@@ -1,0 +1,7 @@
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Release\VendorClient.exe.config
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Release\VendorClient.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Release\VendorClient.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Release\Newtonsoft.Json.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\bin\Release\Newtonsoft.Json.xml
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\obj\Release\VendorClient.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorClient\obj\Release\VendorClient.pdb

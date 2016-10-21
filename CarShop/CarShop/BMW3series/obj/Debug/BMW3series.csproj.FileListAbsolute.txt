@@ -1,0 +1,7 @@
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW3series\bin\Debug\BMW3series.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW3series\bin\Debug\BMW3series.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW3series\bin\Debug\CarShopCommon.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW3series\bin\Debug\CarShopCommon.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW3series\obj\Debug\BMW3series.csprojResolveAssemblyReference.cache
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW3series\obj\Debug\BMW3series.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\BMW3series\obj\Debug\BMW3series.pdb

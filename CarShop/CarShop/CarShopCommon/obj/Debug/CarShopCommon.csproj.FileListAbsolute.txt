@@ -1,0 +1,4 @@
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShopCommon\bin\Debug\CarShopCommon.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShopCommon\bin\Debug\CarShopCommon.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShopCommon\obj\Debug\CarShopCommon.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShopCommon\obj\Debug\CarShopCommon.pdb

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Vendors>
+    <Vendor VendorName="Audi">
+      <Model Name="A4">
+        <Color>Brown</Color>
+        <Price>36000</Price>
+        <State>Sold</State>
+      </Model>
+      <Model Name="A6">
+        <Color>Black</Color>
+        <Price>54000</Price>
+        <State>Available</State>
+      </Model>
+    </Vendor>
+    <Vendor VendorName="Wolkswagen">
+      <Model Name="Passat">
+        <Color>Black</Color>
+        <Price>52000</Price>
+        <State>Sold</State>
+      </Model>
+      <Model Name="Jetta">
+        <Color>Brown</Color>
+        <Price>50000</Price>
+        <State>Available</State>
+      </Model>
+    </Vendor>
+    <Vendor VendorName="BMW" ServiceUrl="http://localhost:55756/VendorService.svc" />
+  </Vendors>
+</Root>

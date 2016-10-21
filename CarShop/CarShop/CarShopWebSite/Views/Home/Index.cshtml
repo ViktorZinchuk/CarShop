@@ -1,0 +1,182 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CarShop</title>
+
+    <script src="~/Scripts/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js" type="text/javascript"></script>
+    <script src="~/signalr/hubs" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+        var carShopHub = $.connection.carShopHub;
+        carShopHub.client.AddCar = function (vendor, model) {
+            var myElem = document.getElementById(vendor + "-models");
+            if (myElem != null)
+            {
+                $('#' + vendor + "-models").append('<p id="' + model + '" style="text-decoration:underline; float:left; cursor:pointer; margin-left:10px; font-size:16px;" onclick="SelectCarInfo(this)">car model: ' + model + '</p>');
+            }
+
+        };
+
+        carShopHub.client.DeleteCar = function (vendor, model) {
+            var myElem = document.getElementById(vendor + "-models");
+            if (myElem != null) {
+                document.getElementById(model).remove();
+            }
+        };
+
+        carShopHub.client.AddVendor = function (vendor) {
+            $('#vendors').append(' <div id="' + vendor + '" style="margin-top:10px;" onclick="SelectVendorCars(this)"><p style="text-decoration:underline; cursor:pointer;">' + vendor + '</p></div>');
+        };
+
+        carShopHub.client.DeleteVendor = function (vendor) {
+            document.getElementById(vendor).remove();
+            document.getElementById(vendor+"-models").remove();
+        };
+
+        carShopHub.client.BuyCar = function (model) {
+            document.getElementById(model+"-state").textContent = "Sold";
+        };
+
+        $.connection.hub.start();
+    });
+    ////////////
+    function SelectVendorCars(vendor) {
+        var vendorName = vendor.id;
+        document.getElementById('VendorName').value = vendorName;
+        $('#ModelInfo').empty();
+        $.ajax({
+            url: "@(Url.Action("SelectModles", "Home"))",
+            type: "GET",
+            cache: false,
+            async: true,
+            data: { vendorname: vendorName },
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                $('#Vendors-cars').empty();
+                var list = result;
+                $.each(list, function (index, item) {
+                    for (var i = 0; i < item.length; i++) {
+                        var myElem = document.getElementById(vendorName + "-models");
+                        if (myElem == null) {
+                            $('#Vendors-cars').append('<div id="' + vendorName + "-models" + '"><p id="' + item[i] + '" style="text-decoration:underline; cursor:pointer; float:left; margin-left:10px; font-size:16px;" onclick="SelectCarInfo(this)">car model: ' + item[i] + '</p></div>');
+                        }
+                        else {
+                            $('#' + vendorName + "-models").append('<p id="' + item[i] + '" style="text-decoration:underline; float:left; cursor:pointer; margin-left:10px; font-size:16px;" onclick="SelectCarInfo(this)">car model: ' + item[i] + '</p>');
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+
+
+    function SelectCarInfo(model) {
+        var Model = model.id;
+        document.getElementById('CarModel').value = model.id;
+        $.ajax({
+            url: "@(Url.Action("ModelInfo", "Home"))",
+            type: "GET",
+            cache: false,
+            async: true,
+            data: { model: Model },
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                $('#ModelInfo').empty();
+                var list = result;
+                $.each(list, function (index, item) {
+                    $('#ModelInfo').append('<p id="' + Model + '-color" >Color: ' + item[0] + '</p>');
+                    $('#ModelInfo').append('<p id="' + Model + '-price">Price: ' + item[1] + '</p>');
+                    $('#ModelInfo').append('<p id="' + Model + '-state">State: ' + item[2] + '</p>');
+                    if (item[2] == "Available") {
+                        $('#ModelInfo').append('<input id="btn" type="button" value="Buy Car" onclick="BuyCar()"/>')
+                    }
+                    $('#ModelInfo').append('<input id="btn" type="button" value="Ordered Car" onclick="MakeOrder()"/>')
+                });
+            }
+        });
+    }
+
+
+    function BuyCar() {
+        var model = $('#CarModel').val();
+        $.ajax({
+            url: "@(Url.Action("BuyCar", "Home"))",
+            type: "GET",
+            cache: false,
+            async: true,
+            data: { model: model },
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+            }
+        });
+        document.getElementById('btn').remove();
+        $('#ModelInfo').append('<p>You buy a car</p>');
+    }
+
+    function MakeOrder() {
+        var model = $('#CarModel').val();
+        var vendor = $('#VendorName').val();
+        $.ajax({
+            url: "@(Url.Action("MakeOrder", "Home"))",
+            type: "GET",
+            cache: false,
+            async: true,
+            data: { model: model, vendorName: vendor },
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                $('#d').append('<p>lol+' + result + '</p>')
+            }
+        });
+        $('#ModelInfo').append('<p>You made order</p>');
+    }
+
+
+
+    </script>
+</head>
+<body style="background-color:#F0F8FF;text-align:center; width:100%; border:0px; margin:0; padding:0;">
+    <div style="width:100%; background-color:#789bb0; height:50px; border:0px; margin:0; padding-top:0;"><h3 style="margin:0;padding-top:10px;">Car Shop</h3></div>
+    <center>
+        
+        <div style="width:800px; margin-top:10px; height:auto; border:1px solid #789bb0; border-radius:10px; min-height:100px; background-color:#8fb3c8;">
+            <div id="vendors" style="width:200px; min-height:100%; float:left;">
+                <div style="background-color:#789bb0; width:100%; height:auto; margin-top:0; padding-top:0; border-top-left-radius:10px; height:40px; text-align:center;"><p style="font-size:20px; margin:0;padding-top:5px;">Vendors</p></div>
+
+                @{
+                    if (ViewBag.Vendors != null)
+                    {
+                        for (int i = 0; i < ViewBag.Vendors.Count; i++)
+                        {
+                            <div id="@ViewBag.Vendors[i]" style="margin-top:10px;" onclick="SelectVendorCars(this)"><p style="text-decoration:underline;cursor:pointer;">@ViewBag.Vendors[i]</p></div>
+                        }
+                    }
+                }
+            </div>
+            <div style="width:600px; height:100%; float:right;  min-height:100%; background-color:#F0F8FF; border-bottom-right-radius:10px;border-top-right-radius:10px;">
+                <div style="background-color:#789bb0; width:100%; height:auto; margin-top:0; padding-top:0; border-top-right-radius:10px; height:40px; text-align:center;"><p style="font-size:20px; margin:0;padding-top:5px;">Models</p></div>
+
+                <div id="Vendors-cars" style="width:100%; height:100%; border-bottom:1px solid #789bb0; min-height:50px;">
+                </div>
+                <input type="text" id="VendorName" style="visibility:hidden; display:none;" />
+                <input type="text" id="CarModel" style="visibility:hidden; display:none;" />
+                <div id="ModelInfo" style="width:100%; height:100%; border-bottom-right-radius:10px;">
+                </div>
+            </div>
+            <p style="clear:both;height:0; margin:0; padding:0;"></p>
+        </div>
+</center>
+</body>
+</html>

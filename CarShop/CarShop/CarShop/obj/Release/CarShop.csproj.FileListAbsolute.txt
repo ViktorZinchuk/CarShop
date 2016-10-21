@@ -1,0 +1,7 @@
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\bin\Release\CarShop.exe.config
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\bin\Release\CarShop.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\bin\Release\CarShop.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\obj\Release\CarShop.ProjectInstaller.resources
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\obj\Release\CarShop.csproj.GenerateResource.Cache
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\obj\Release\CarShop.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\CarShop\obj\Release\CarShop.pdb

@@ -1,0 +1,10 @@
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\bin\VendorWcfService.dll.config
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\bin\VendorWcfService.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\bin\VendorWcfService.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\bin\VendorClient.exe
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\bin\Newtonsoft.Json.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\bin\VendorClient.pdb
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\bin\Newtonsoft.Json.xml
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\obj\Release\VendorWcfService.csprojResolveAssemblyReference.cache
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\obj\Release\VendorWcfService.dll
+C:\Users\vzinchuk\Desktop\CarShop\CarShop\VendorWcfService\obj\Release\VendorWcfService.pdb
